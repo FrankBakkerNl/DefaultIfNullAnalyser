@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultIfNullAnalyzer", "DefaultIfNullAnalyzer\DefaultIfNullAnalyzer\DefaultIfNullAnalyzer.csproj", "{BC774AED-4D25-4CA5-AE5D-58C0C1F02AA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultIfNullAnalyzer.Test", "DefaultIfNullAnalyzer\DefaultIfNullAnalyzer.Test\DefaultIfNullAnalyzer.Test.csproj", "{F63431A8-6ACC-4444-9117-D5980E6CA079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultIfNullAnalyzer.Vsix", "DefaultIfNullAnalyzer\DefaultIfNullAnalyzer.Vsix\DefaultIfNullAnalyzer.Vsix.csproj", "{CDCACBA4-3CC9-4510-8C4E-482302E7DD75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC774AED-4D25-4CA5-AE5D-58C0C1F02AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC774AED-4D25-4CA5-AE5D-58C0C1F02AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC774AED-4D25-4CA5-AE5D-58C0C1F02AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC774AED-4D25-4CA5-AE5D-58C0C1F02AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F63431A8-6ACC-4444-9117-D5980E6CA079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F63431A8-6ACC-4444-9117-D5980E6CA079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F63431A8-6ACC-4444-9117-D5980E6CA079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F63431A8-6ACC-4444-9117-D5980E6CA079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDCACBA4-3CC9-4510-8C4E-482302E7DD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCACBA4-3CC9-4510-8C4E-482302E7DD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDCACBA4-3CC9-4510-8C4E-482302E7DD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDCACBA4-3CC9-4510-8C4E-482302E7DD75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://bakker.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DefaultIfNullAnalyzer\\DefaultIfNullAnalyzer.Test\\DefaultIfNullAnalyzer.Test.csproj
+		SccProjectName1 = DefaultIfNullAnalyzer/DefaultIfNullAnalyzer.Test
+		SccLocalPath1 = DefaultIfNullAnalyzer\\DefaultIfNullAnalyzer.Test
+		SccProjectUniqueName2 = DefaultIfNullAnalyzer\\DefaultIfNullAnalyzer.Vsix\\DefaultIfNullAnalyzer.Vsix.csproj
+		SccProjectName2 = DefaultIfNullAnalyzer/DefaultIfNullAnalyzer.Vsix
+		SccLocalPath2 = DefaultIfNullAnalyzer\\DefaultIfNullAnalyzer.Vsix
+		SccProjectUniqueName3 = DefaultIfNullAnalyzer\\DefaultIfNullAnalyzer\\DefaultIfNullAnalyzer.csproj
+		SccProjectName3 = DefaultIfNullAnalyzer/DefaultIfNullAnalyzer
+		SccLocalPath3 = DefaultIfNullAnalyzer\\DefaultIfNullAnalyzer
+	EndGlobalSection
+EndGlobal

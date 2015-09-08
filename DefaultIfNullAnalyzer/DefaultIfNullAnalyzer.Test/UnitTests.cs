@@ -25,6 +25,7 @@ namespace DefaultIfNullAnalyzer.Test
             TestCanNotFix("x.DefaultIfNull(y => x)");
             TestCanNotFix("x.DefaultIfNull(y => y + 2)");
             TestCanNotFix("x.DefaultIfNull(y => x.y)");
+            TestCanNotFix("x.DefaultIfNull(y =>)");
         }
 
         [TestMethod]

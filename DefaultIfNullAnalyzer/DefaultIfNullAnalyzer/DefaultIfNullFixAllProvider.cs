@@ -71,14 +71,14 @@ namespace DefaultIfNullAnalyzer
 
         private static async Task<SyntaxNode> CreateNewDocumentSyntaxRootAsync(FixAllContext fixAllContext, Document document, CancellationToken cancellationToken)
         {
-            var diagnostics = await fixAllContext.GetDocumentDiagnosticsAsync(document);
+            var diagnostics = await fixAllContext.GetDocumentDiagnosticsAsync(document).ConfigureAwait(false);
 
-            var root = await document.GetSyntaxRootAsync(cancellationToken);
+            var root = await document.GetSyntaxRootAsync(cancellationToken).ConfigureAwait(false);
 
             var nodesToFix = diagnostics.Select(diagnostic => DefaulIfNullExpressionHelper.GetTargetExpression(diagnostic, root));
-            var newRoot = root.ReplaceNodes(nodesToFix,
+
+            return root.ReplaceNodes(nodesToFix,
                 (orignalNode, rewritten) => DefaulIfNullExpressionHelper.CreateRelacementNode(rewritten));
-            return newRoot;
         }
     }
 }

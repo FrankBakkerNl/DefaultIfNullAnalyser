@@ -115,32 +115,15 @@ namespace DefaultIfNullAnalyzer
             // a => a[2].b.c().d
 
             // The left most part of the body should be a SimpleNameSyntax with the same name as the lambda argument
-            // The parent of this name should be a MemberAccessExpressionSyntax or a ElementAccessExpressionSyntax
+            var nameSyntax = lambda.Body.DescendantTokens().FirstOrDefault().Parent as SimpleNameSyntax;
 
-            var firstMemberAccesExpression = GetLeftMostDecendant(lambda.Body);
+            if (nameSyntax == null || nameSyntax.ToString() != lambda.Parameter.ToString()) return null;
 
-            var nameSyntax = firstMemberAccesExpression as SimpleNameSyntax;
-            if (nameSyntax != null && nameSyntax.ToString() == lambda.Parameter.ToString())
-            {
-                var parent = nameSyntax.Parent;
+            // We can convert it if we find a MemberAccessExpressionSyntax or an ElementAccessExpressionSyntax as the parent
+            var parent = nameSyntax.Parent;
+            if (parent is MemberAccessExpressionSyntax || parent is ElementAccessExpressionSyntax)
+                return parent;
 
-                // We can convert it if we find a MemberAccessExpressionSyntax or an ElementAccessExpressionSyntax
-                if (parent is MemberAccessExpressionSyntax || parent is ElementAccessExpressionSyntax)
-                    return parent;
-            }
-            return null;
-        }
-
-        private static SyntaxNode GetLeftMostDecendant(SyntaxNode current)
-        {
-            // In case we have a long list of expressions like 'a.b + c.d().e' we need to find 'a'
-            // That would be the first child of the first child of the first child ..
-            while (current is ExpressionSyntax)
-            {
-                var next = current.ChildNodes().FirstOrDefault();
-                if (next == null) return current;
-                current = next;
-            }
             return null;
         }
     }
